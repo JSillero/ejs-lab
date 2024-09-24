@@ -15,19 +15,21 @@
 
   <ul>
     <%  for(element of menu){%>
-      <li>
-        <p><b><%=element.name%></b></p>
-        <p>Rating: <%=element.rating%>/5 Price: <%=element.rating%> </p>
-        <p><%=element.details%></p>
-      </li>
-      <%} %>
-    
+    <li>
+      <p><b><%=element.name%></b></p>
+      <p>Rating: <%=element.rating%>/5
+        <% if (element.rating ==5) {%>
+            ⭐
+            <%} %>
+
+        Price: <%=element.rating%> </p>
+      <p><%=element.details%></p>
+    </li>
+    <%} %>
+
   </ul>
-  
-    
-  
- 
- 
+
+
 
 
 
