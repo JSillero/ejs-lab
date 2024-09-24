@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+
+<body>
+  <h1>Full Menu</h1>
+  <%- include('./partials/nav') %>
+
+
+   <% for (const name in menus) {%>
+  <h2><%=name.charAt(0).toUpperCase() + name.slice(1);%></h2>
+  <ul>
+    <%  for(element of menus[name]){%>
+      <li>
+        <p><b><%=element.name%></b></p>
+        <p>Rating: <%=element.rating%>/5 Price: <%=element.rating%> </p>
+        <p><%=element.details%></p>
+      </li>
+      <%} %>
+    
+  </ul>
+  <%}%>
+    
+  
+ 
+ 
+
+
+
+</body>
+
+</html>
